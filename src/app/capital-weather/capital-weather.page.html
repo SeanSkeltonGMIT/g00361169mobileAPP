@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Dublins Weather</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ul>
+    <!-- looping over weatherdata from ts file and adding it too weather-->
+    <li *ngFor="let weather of weatherData">
+      <ion-header>Weather Icon</ion-header>
+      <img src='http://openweathermap.org/img/wn/{{weather.icon}}.png'>
+      
+    
+      <br>
+      <!-- data binding from API-->
+      <ion-header> Temperature</ion-header>
+      {{mainData.temp}}
+      <br>
+      <br>
+      <ion-header> Condtions </ion-header>
+      <br>
+      {{weather.description}}
+      <br>
+      <br>
+      <ion-header>humidity</ion-header>
+      {{mainData.humidity}} %
+      <br>
+      <br>
+      <ion-header>Wind Speed</ion-header>
+      {{windData.speed}} km/hr
+      <br>
+  
+  
+      <br>
+    </li>
+    </ul>
+    <!-- navigation -->
+    <ion-button [routerLink]="['/weatherdata']">Click here if you want too search counties</ion-button>
+    <ion-button [routerLink]="['/home']">Click here if you want too go too home page</ion-button>
+    <ion-button [routerLink]="['/storage']">Click here if you want too storage page</ion-button>
+    <ion-button [routerLink]="['/capital-weather']">Click here if you want too go too dublins weather</ion-button>
+</ion-content>

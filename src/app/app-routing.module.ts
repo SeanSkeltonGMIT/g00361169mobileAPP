@@ -8,6 +8,14 @@ const routes: Routes = [
     path: 'weatherdata',
     loadChildren: () => import('./weatherdata/weatherdata.module').then( m => m.WeatherdataPageModule)
   },
+  {
+    path: 'storage',
+    loadChildren: () => import('./storage/storage.module').then( m => m.StoragePageModule)
+  },
+  {
+    path: 'capital-weather',
+    loadChildren: () => import('./capital-weather/capital-weather.module').then( m => m.CapitalWeatherPageModule)
+  },
 ];
 
 @NgModule({

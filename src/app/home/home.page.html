@@ -9,16 +9,17 @@
 <ion-content>
   <div class="ion-padding">
 
-    <ion-button [routerLink]="['/weatherdata']"></ion-button>
+    
 
 
-
+<!-- the tags are for fore matting-->
   <ion-list>
     <ion-list-header>
-      <ion-label>Your Location </ion-label>
+      <ion-label>Your Location coordinates</ion-label>
     </ion-list-header>
     <ion-item>
       <ion-label>
+        <!-- taking latitude and longitude from data binding the resp too variables -->
         Latitue {{latitude}}
       </ion-label>
     </ion-item>
@@ -29,4 +30,9 @@
     </ion-item>
     </ion-list>    
   </div>
+  <!-- navigation-->
+  <ion-button [routerLink]="['/weatherdata']">Click here if you want too search counties</ion-button>
+  <ion-button [routerLink]="['/home']">Click here if you want too go too home page</ion-button>
+  <ion-button [routerLink]="['/storage']">Click here if you want too storage page</ion-button>
+  <ion-button [routerLink]="['/capital-weather']">Click here if you want too go too dublins weather</ion-button>
 </ion-content>

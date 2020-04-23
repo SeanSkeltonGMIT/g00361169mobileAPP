@@ -1,32 +1,55 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>weatherData</ion-title>
+  <ion-toolbar >
+    <ion-title >WeatherForecaster</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
 
-
-  <p>
-    YOU MADE IT YAY
-  </p>
+  <!-- bindings input and stores what the user enters-->
+  <ion-input [(ngModel)]="searchCity" ></ion-input>
+  <!--upon cliking passes the input too the service method for searching API by city and calls search city method in ts file-->
+  <ion-button (click)="doSearchCity()">search</ion-button>
 <ul>
+    <!-- looping over weatherdata from ts file and adding it too weather-->
   <li *ngFor="let weather of weatherData">
+    <ion-header>Weather Icon</ion-header>
+    <!-- takes icon code from class variables in .ts file and subs it into url-->
     <img src='http://openweathermap.org/img/wn/{{weather.icon}}.png'>
     
-  
-    
-    {{weather.id}}
+  <!-- binding data from API-->
     <br>
+    <ion-header> Temperature</ion-header>
     {{mainData.temp}}
     <br>
-    longitude {{coordData.lon}}
     <br>
-     latitude{{coordData.lat}}
+    <ion-header> Condtions </ion-header>
+    <br>
+    {{weather.description}}
+    <br>
+    <br>
+    <ion-header>humidity</ion-header>
+    {{mainData.humidity}} %
+    <br>
+    <br>
+    <ion-header>Wind Speed</ion-header>
+    {{windData.speed}} km/hr
+    <br>
 
-  
+
     <br>
   </li>
   </ul>
+  <!-- navigation-->
+  <ion-button [routerLink]="['/weatherdata']">Click here if you want too search counties</ion-button>
+  <ion-button [routerLink]="['/home']">Click here if you want too go too home page</ion-button>
+  <ion-button [routerLink]="['/storage']">Click here if you want too storage page</ion-button>
+  <ion-button [routerLink]="['/capital-weather']">Click here if you want too go too dublins weather</ion-button>
+
+ 
+
+
+
+
 
      
 </ion-content>
