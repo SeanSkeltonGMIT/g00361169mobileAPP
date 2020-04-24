@@ -25,14 +25,21 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-ion-title.large-title {
-    color: lightblue;
-    background-color: lightblue;
+ion-title{
+    color: smoke whitesmoke;
+    background-color: navy;
     font-size: 30px;
+    font-family:'Arial Narrow Bold'
   }
   
-  ion-toolbar.large-title {
-    color: lightblue;
-    background-color: lightblue;
+  ion-toolbar{
+    color: white;
+    background-color: darkblue;
     font-size: 30px;
+  }
+
+  ion-header{
+    color: white;
+    background-color: darkblue;
+    font-size: large;
   }
